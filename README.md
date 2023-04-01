@@ -18,13 +18,13 @@ My display connector is marked with "GME12864-70".
 | 3.3V     |      | VDD   |
 | GND      |      | GND   |
 
-
-![test](github.com/mboehmerm/Luatos_C3_Core_DIO_SSD1309_I2C_128x64/pictures/Luatos_ESP32_C3_Core.png)
-
 ![Luatos_C3_Core](pictures/Luatos_ESP32_C3_Core.png)
 
 # Arduino IDE
 
-Board: "ESP32C3 Dev Module" 
-Flash Mode: "DIO"
+- Board: "ESP32C3 Dev Module" 
+- Flash Mode: "DIO"
+
+![test](https://github.com/mboehmerm/Luatos_C3_Core_DIO_SSD1309_I2C_128x64/blob/main/pictures/I2C_TFT.png)
+
 
