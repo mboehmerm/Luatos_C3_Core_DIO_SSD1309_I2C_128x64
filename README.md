@@ -27,4 +27,5 @@ My display connector is marked with "GME12864-70".
 
 ![test](https://github.com/mboehmerm/Luatos_C3_Core_DIO_SSD1309_I2C_128x64/blob/main/pictures/I2C_TFT.png)
 
+![test](https://github.com/mboehmerm/Luatos_C3_Core_DIO_SSD1309_I2C_128x64/pictures/I2C_TFT.png)
 
