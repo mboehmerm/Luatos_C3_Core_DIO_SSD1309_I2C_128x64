@@ -44,7 +44,7 @@ GraphicsTest_Luatos_C3_Core_DIO_SSD1309_I2C_128x64.ino :
 U8G2_SSD1309_128X64_NONAME2_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE); 
 ...
 ```
-This driver uses Hardware I2C. 
+This u8g2 drivers for I2C and SPI are using Hardware I2C (SPI), so i must use the Pins in the pinout shown above. 
 
 # Luatos ESP32 C3 Core with SPI display GWG12864-06D
 
