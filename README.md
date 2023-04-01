@@ -23,7 +23,7 @@ My display connector is marked with "GME12864-70".
 | 3.3V     |      | VDD   |
 | GND      |      | GND   |
 
-Pinout of my Luatos ESP32 C3 Core :
+Pinout of my Luatos ESP32 C3 Core as i found out :
 
 ![Luatos_C3_Core](pictures/Luatos_ESP32_C3_Core.png)
 
@@ -43,8 +43,9 @@ GraphicsTest_Luatos_C3_Core_DIO_SSD1309_I2C_128x64.ino :
 // ESP32 C3 CORE LUATOS : 1.3" OLED IIC V2.0. SSD1309
 U8G2_SSD1309_128X64_NONAME2_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE); 
 ...
-
 ```
+This driver uses Hardware I2C. 
+
 # Testing the Luatos ESP32 C3 Core with SPI display GWG12864-06D
 LCD Display GWG12864-06D
 
@@ -60,7 +61,7 @@ LCD Display GWG12864-06D
 | Led 47Ω -> 3.3V | 47Ω  | A     |
 | Led GND         | GND  | K     |
 
-The A Pin of the backlight is connected via a 47Ω resistor to 3.3V. RSE (TFT reset pin) is connected to the REST pin of the Luatos ESP32
+The Pin A of the TFT ( backlight ) is connected via a 47Ω resistor to 3.3V. RSE ( TFT reset pin ) is connected to the REST pin of the Luatos ESP32
 
 Initialization :
 ```
