@@ -2,7 +2,7 @@
 
 Aliexpress Display ~3€, tested with Luatos ESP32 C3 Core ~3€ 
 
-Tested with Arduino IDE 2.0.4 u8g2 library by olikraus
+Tested with Arduino IDE 2.0.4 and u8g2 library by olikraus
 
 ![SSD1309_I2C_128x64](pictures/I2C_TFT_drawCircle.png)
 
@@ -46,8 +46,8 @@ U8G2_SSD1309_128X64_NONAME2_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
 ```
 This driver uses Hardware I2C. 
 
-# Testing the Luatos ESP32 C3 Core with SPI display GWG12864-06D
-LCD Display GWG12864-06D
+# Luatos ESP32 C3 Core with SPI display
+LCD Display GWG12864-06D :
 
 |                 | GPIO | TFT   |
 | :-------------- | ---: | :---- |
