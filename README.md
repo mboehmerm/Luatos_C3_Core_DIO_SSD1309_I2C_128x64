@@ -4,7 +4,7 @@ Aliexpress Display ~3€, tested with Luatos ESP32 C3 Core ~3€
 
 Tested with Arduino IDE 2.0.4 u8g2 library by olikraus
 
-![Luatos_C3_Core_DIO_SSD1309_I2C_128x64](pictures/I2C_TFT.png)
+![Luatos_C3_Core_DIO_SSD1309_I2C_128x64](pictures/tree/main/I2C_TFT.png)
 
 My display connector is marked with "GME12864-70".
 
