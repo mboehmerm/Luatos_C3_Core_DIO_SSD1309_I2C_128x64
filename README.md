@@ -4,10 +4,15 @@ Aliexpress Display ~3€, tested with Luatos ESP32 C3 Core ~3€
 
 Tested with Arduino IDE 2.0.4 u8g2 library by olikraus
 
-![SSD1309_I2C_128x64](pictures/I2C_TFT.png)
+![SSD1309_I2C_128x64](pictures/I2C_TFT_drawCircle.png)
+
+![SSD1309_I2C_128x64](pictures/I2C_TFT_Back.png)
 
 My display connector is marked with "GME12864-70".
 
+# Arduino IDE
+- Board: "ESP32C3 Dev Module" 
+- Flash Mode: "DIO"
 
 # Connections for Luatos ESP32 C3 Core
 
@@ -17,6 +22,8 @@ My display connector is marked with "GME12864-70".
 | I2C SCL  |  9   | SCL   |
 | 3.3V     |      | VDD   |
 | GND      |      | GND   |
+
+Pinout of my Luatos ESP32 C3 Core :
 
 ![Luatos_C3_Core](pictures/Luatos_ESP32_C3_Core.png)
 
@@ -61,18 +68,3 @@ Initialization :
 //U8G2_ST7565_ERC12864_ALT_F_4W_HW_SPI u8g2(U8G2_R0, /* cs=*/ 7, /* dc=*/ 19, /* reset=*/ U8X8_PIN_NONE);  
 ...
 ```
-
-
-# Arduino IDE
-
-- Board: "ESP32C3 Dev Module" 
-- Flash Mode: "DIO"
-
-
-
-
-![test](https://github.com/mboehmerm/Luatos_C3_Core_DIO_SSD1309_I2C_128x64/blob/main/pictures/I2C_TFT.png)
-
-
-
-
