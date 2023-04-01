@@ -48,7 +48,7 @@ This u8g2 drivers for I2C and SPI are using Hardware I2C (SPI), so i must use th
 
 # Luatos ESP32 C3 Core with SPI display GWG12864-06D
 
-Connections for LCD Display GWG12864-06D :
+Connections for LCD Display GMG12864-06D :
 
 |                 | GPIO | TFT   |
 | :-------------- | ---: | :---- |
