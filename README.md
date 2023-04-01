@@ -27,7 +27,7 @@ Pinout of my Luatos ESP32 C3 Core as i found out :
 
 ![Luatos_C3_Core](pictures/Luatos_ESP32_C3_Core.png)
 
-# Initialization of the library u8g2
+# Initialisation of the library u8g2
 GraphicsTest_Luatos_C3_Core_DIO_SSD1309_I2C_128x64.ino :
 ```
 #include <Arduino.h>
@@ -58,12 +58,12 @@ LCD Display GWG12864-06D
 | Reset           | REST | RSE   |
 | 3.3V            | 3.3V | VDD   |
 | GND             | GND  | VSS   |
-| Led 47Ω -> 3.3V | 47Ω  | A     |
-| Led GND         | GND  | K     |
+| LED 47Ω -> 3.3V | 47Ω  | A     |
+| LED GND         | GND  | K     |
 
-The Pin A of the TFT ( backlight ) is connected via a 47Ω resistor to 3.3V. RSE ( TFT reset pin ) is connected to the REST pin of the Luatos ESP32
+The Pin A of the TFT ( backlight LED ) is connected via a 47Ω resistor to 3.3V. RSE ( TFT reset pin ) is connected to the REST pin of the Luatos ESP32
 
-Initialization :
+Initialisation :
 ```
 ...
 //U8G2_ST7565_ERC12864_ALT_F_4W_HW_SPI u8g2(U8G2_R0, /* cs=*/ 7, /* dc=*/ 19, /* reset=*/ U8X8_PIN_NONE);  
