@@ -6,7 +6,7 @@ Tested with Arduino IDE 2.0.4 u8g2 library by olikraus
 
 ![Luatos_C3_Core_DIO_SSD1309_I2C_128x64](pictures\I2C_TFT.png)
 
-My display connector is marked with "GME12864-70" .
+My display connector is marked with "GME12864-70".
 
 
 # Connections
@@ -25,3 +25,5 @@ My display connector is marked with "GME12864-70" .
 
 Board: "ESP32C3 Dev Module" 
 Flash Mode: "DIO"
+
+# Test
