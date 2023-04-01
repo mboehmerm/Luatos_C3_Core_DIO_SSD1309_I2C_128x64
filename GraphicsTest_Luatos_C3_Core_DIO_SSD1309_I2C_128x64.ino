@@ -49,7 +49,7 @@
 // 
 //  Board: "ESP32C3 Dev Module" and Flash Mode: "DIO"  !!!
 //
-//  Display: 1.3" OLED IIC V2.0 or GWG12864-06D ( Hardware SPI )
+//  Display: 1.3" OLED IIC V2.0 or GMG12864-06D ( Hardware SPI )
 //
 //  Hardware-Pin's Luatos ESP32 C3 CORE :
 //
@@ -72,7 +72,7 @@
 // ESP32 C3 CORE LUATOS : 1.3" OLED IIC V2.0. SSD1309 (not SSD1306 or SH1106), only SSD1309 and  NONAME2   !!!
 U8G2_SSD1309_128X64_NONAME2_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE); 
 
-// ESP32 C3 CORE LUATOS : GWG12864-06D HW-SPI , clock = 4, data = 6, reset (TFT) connected to Rest (Luatos)
+// ESP32 C3 CORE LUATOS : GMG12864-06D HW-SPI , clock = 4, data = 6, reset (TFT) connected to Rest (Luatos)
 //U8G2_ST7565_ERC12864_ALT_F_4W_HW_SPI u8g2(U8G2_R0, /* cs=*/ 7, /* dc=*/ 19, /* reset=*/ U8X8_PIN_NONE);  
 //#define CONTRAST 75  // Necessary only for GWG12864-06D
 
