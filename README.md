@@ -2,7 +2,7 @@
 
 Aliexpress Display ~3€, tested with Luatos ESP32 C3 Core ~3€ 
 
-Tested with Arduino IDE 2.0.4 and u8g2 library by olikraus
+Tested with Arduino IDE 2.0.4 and u8g2 library by olikraus.
 
 ![SSD1309_I2C_128x64](pictures/I2C_TFT_drawCircle.png)
 
@@ -27,7 +27,7 @@ Pinout of my Luatos ESP32 C3 Core as i found out :
 
 ![Luatos_C3_Core](pictures/Luatos_ESP32_C3_Core.png)
 
-# Initialisation of the library u8g2
+# Initialization of the library u8g2
 GraphicsTest_Luatos_C3_Core_DIO_SSD1309_I2C_128x64.ino :
 ```
 #include <Arduino.h>
@@ -64,7 +64,7 @@ Connections for LCD Display GWG12864-06D :
 
 The Pin A of the TFT ( backlight LED ) is connected via a 47Ω resistor to 3.3V. RSE ( TFT reset pin ) is connected to the REST pin of the Luatos ESP32
 
-Initialisation :
+Initialization :
 ```
 ...
 //U8G2_ST7565_ERC12864_ALT_F_4W_HW_SPI u8g2(U8G2_R0, /* cs=*/ 7, /* dc=*/ 19, /* reset=*/ U8X8_PIN_NONE);  
