@@ -33,7 +33,7 @@ GraphicsTest_Luatos_C3_Core_DIO_SSD1309_I2C_128x64.ino :
 #include <Arduino.h>
 #include <U8g2lib.h>
 
-#ifdef U8X8_HAVE_HW_SPI
+#ifdef  U8X8_HAVE_HW_SPI
 #include <SPI.h>
 #endif
 #ifdef U8X8_HAVE_HW_I2C
