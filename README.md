@@ -1,16 +1,16 @@
 # Luatos_ESP32_C3_Core_DIO_SSD1309_I2C_128x64
 
-Aliexpress Display ~3€, tested with Luatos ESP32 C3 Core ~3€ 
+Aliexpress I2C Display ~3€, tested with Luatos ESP32 C3 Core ~3€ 
 
 Tested with Arduino IDE 2.0.4 and u8g2 library by olikraus.
 
-![SSD1309_I2C_128x64](pictures/I2C_TFT_drawCircle.png)
+![SSD1309 and ESP32 C3](pictures/I2C_TFT_drawCircle.png)
 
-![SSD1309_I2C_128x64](pictures/I2C_TFT_Back.png)
+![SSD1309 ans ESP32 C3 Back](pictures/I2C_TFT_Back.png)
 
 My display connector is marked with "GME12864-70".
 
-# Arduino IDE
+# Arduino IDE configuration
 - Board: "ESP32C3 Dev Module" 
 - Flash Mode: "DIO"
 
@@ -29,7 +29,7 @@ Pinout of my Luatos ESP32 C3 Core as i found out :
 
 # Initialization of the library u8g2
 GraphicsTest_Luatos_C3_Core_DIO_SSD1309_I2C_128x64.ino :
-```
+```c++
 #include <Arduino.h>
 #include <U8g2lib.h>
 
@@ -42,9 +42,10 @@ GraphicsTest_Luatos_C3_Core_DIO_SSD1309_I2C_128x64.ino :
 
 // ESP32 C3 CORE LUATOS : 1.3" OLED IIC V2.0. SSD1309
 U8G2_SSD1309_128X64_NONAME2_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE); 
+
 ...
 ```
-This u8g2 drivers for I2C and SPI are using Hardware I2C (SPI), so i must use the Pins in the pinout shown above. 
+> This u8g2 drivers for I2C and SPI are using Hardware I2C (SPI), so i must use the Pins in the pinout shown above. 
 
 # Luatos ESP32 C3 Core with SPI display GWG12864-06D
 
@@ -65,10 +66,22 @@ Connections for LCD Display GMG12864-06D Ver 2.2 :
 The Pin A of the TFT (backlight LED) is connected via a 47Ω resistor to 3.3V. RSE ( TFT reset pin ) is connected to the REST pin of the Luatos ESP32
 
 Initialization :
-```
-...
-//U8G2_ST7565_ERC12864_ALT_F_4W_HW_SPI u8g2(U8G2_R0, /* cs=*/ 7, /* dc=*/ 19, /* reset= */ U8X8_PIN_NONE);  
+```c
+#include <Arduino.h>
+#include <U8g2lib.h>
+
+#ifdef  U8X8_HAVE_HW_SPI
+#include <SPI.h>
+#endif
+#ifdef U8X8_HAVE_HW_I2C
+#include <Wire.h>
+#endif
+
+
+U8G2_ST7565_ERC12864_ALT_F_4W_HW_SPI u8g2(U8G2_R0, /* cs=*/ 7, /* dc=*/ 19, /* reset= */ U8X8_PIN_NONE);  
+
 ...
 ```
 
-<!-- Test -->
+
+<!-- unvisible -->
