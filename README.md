@@ -10,24 +10,24 @@ Tested with Arduino IDE 2.0.4 and u8g2 library by olikraus.
 
 My display connector is marked with "GME12864-70".
 
-# Arduino IDE configuration
+## Arduino IDE configuration
 - Board: "ESP32C3 Dev Module" 
 - Flash Mode: "DIO"
 
-# Connections for Luatos ESP32 C3 Core
+## Connections for Luatos ESP32 C3 Core
 
-|          | GPIO | TFT   |
-| :------- | ---: | :---- |
-| I2C SDA  |  8   | SDA   |
-| I2C SCL  |  9   | SCL   |
-| 3.3V     |      | VDD   |
-| GND      |      | GND   |
+| TFT  | GPIO |         | 
+| :--- | ---: | :------ |
+| SDA  | 8    | I2C SDA |
+| SCL  | 9    | I2C SCL |
+| VDD  |      | 3.3V    |
+| GND  |      | GND     |
 
-Pinout of my Luatos ESP32 C3 Core as i found out :
+Pinout of my Luatos ESP32 C3 Core as i found out : 
 
 ![Luatos_C3_Core](pictures/Luatos_ESP32_C3_Core.png)
 
-# Initialization of the library u8g2
+## Initialization of the library u8g2
 GraphicsTest_Luatos_C3_Core_DIO_SSD1309_I2C_128x64.ino :
 ```c++
 #include <Arduino.h>
@@ -40,28 +40,27 @@ GraphicsTest_Luatos_C3_Core_DIO_SSD1309_I2C_128x64.ino :
 #include <Wire.h>
 #endif
 
-// ESP32 C3 CORE LUATOS : 1.3" OLED IIC V2.0. SSD1309
 U8G2_SSD1309_128X64_NONAME2_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE); 
 
-...
+//...
 ```
 > This u8g2 drivers for I2C and SPI are using Hardware I2C (SPI), so i must use the Pins in the pinout shown above. 
 
-# Luatos ESP32 C3 Core with SPI display GWG12864-06D
+## Luatos ESP32 C3 Core with **SPI** display GWG12864-06D
 
 Connections for LCD Display GMG12864-06D Ver 2.2 :
 
-|                 | GPIO | TFT   |
-| :-------------- | ---: | :---- |
-| SPI MOSI        |  6   | SI    |
-| SPI SCLK        |  4   | SCL   |
-| CS              |  7   | CS    |
-| DC              | 19   | RS    |
-| Reset           | REST | RSE   |
-| 3.3V            | 3.3V | VDD   |
-| GND             | GND  | VSS   |
-| LED 47Ω -> 3.3V | 47Ω  | A     |
-| LED GND         | GND  | K     |
+| TFT  | GPIO |                 |
+| :--- | ---: | :-------------- |
+| SI   |    6 | SPI MOSI        |
+| SCL  |    4 | SPI SCLK        |
+| CS   |    7 | CS              |
+| RS   |   19 | DC              |
+| RSE  | REST | REST Pin        |
+| VDD  |      | 3.3V            |
+| VSS  |      | GND             |
+| A    |      | LED A -> 47Ω -> 3.3V |
+| K    |      | LED K -> GND         |
 
 The Pin A of the TFT (backlight LED) is connected via a 47Ω resistor to 3.3V. RSE ( TFT reset pin ) is connected to the REST pin of the Luatos ESP32
 
@@ -79,8 +78,7 @@ Initialization :
 
 U8G2_ST7565_ERC12864_ALT_F_4W_HW_SPI u8g2(U8G2_R0, /* cs=*/ 7, /* dc=*/ 19, /* reset= */ U8X8_PIN_NONE);  
 
-...
+//...
 ```
-
 
 <!-- unvisible -->
