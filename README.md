@@ -65,7 +65,7 @@ Connections for LCD Display GMG12864-06D Ver 2.2 :
 The Pin A of the TFT (backlight LED) is connected via a 47Ω resistor to 3.3V. RSE ( TFT reset pin ) is connected to the REST pin of the Luatos ESP32 C3.
 
 Initialization :
-```c
+```c++
 #include <Arduino.h>
 #include <U8g2lib.h>
 
@@ -77,8 +77,17 @@ Initialization :
 #endif
 
 U8G2_ST7565_ERC12864_ALT_F_4W_HW_SPI u8g2(U8G2_R0, /* cs=*/ 7, /* dc=*/ 19, /* reset= */ U8X8_PIN_NONE);  
+#define CONTRAST 75  // don't forget
 
 //...
+
+void setup(void) {
+  u8g2.begin();
+  u8g2.setContrast(CONTRAST);  // Necessary for GMG12864-06D 
+}
+
+//...
+
 ```
 
 <!-- unvisible -->
