@@ -77,7 +77,7 @@ Initialization :
 #endif
 
 U8G2_ST7565_ERC12864_ALT_F_4W_HW_SPI u8g2(U8G2_R0, /* cs=*/ 7, /* dc=*/ 19, /* reset= */ U8X8_PIN_NONE);  
-#define CONTRAST 75  // don't forget
+#define CONTRAST 75            // don't forget
 
 //...
 
