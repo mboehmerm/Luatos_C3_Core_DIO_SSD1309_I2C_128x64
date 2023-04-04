@@ -28,7 +28,7 @@ My display connector is marked with "GME12864-70".
 ![Luatos_C3_Core](pictures/Luatos_ESP32_C3_Core.png)
 
 ## Initialization of the library u8g2 2.33.15
-raphicsTest_Luatos_C3_Core_DIO_SSD1309_I2C_128x64.ino :
+GraphicsTest_Luatos_C3_Core_DIO_SSD1309_I2C_128x64.ino :
 ```c++
 #include <Arduino.h>
 #include <U8g2lib.h>
