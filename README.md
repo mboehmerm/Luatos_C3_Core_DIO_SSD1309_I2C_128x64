@@ -43,6 +43,16 @@ GraphicsTest_Luatos_C3_Core_DIO_SSD1309_I2C_128x64.ino :
 U8G2_SSD1309_128X64_NONAME2_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE); 
 
 //...
+
+void setup(void) {
+  //Speedtest : Arduino\libraries\U8g2\examples\full_buffer\FPS\FPS.ino
+  //u8g2.setBusClock( 400000); // 31.6 FPS (default)
+  //u8g2.setBusClock(1000000); // 58.2 FPS
+  u8g2.begin();
+  u8g2.setContrast(CONTRAST);  // Necessary for GMG12864-06D 
+}
+
+//...
 ```
 > This u8g2 drivers for I2C and SPI are using Hardware I2C (SPI), so i must use the Pins in the pinout shown above. 
 
@@ -82,6 +92,9 @@ U8G2_ST7565_ERC12864_ALT_F_4W_HW_SPI u8g2(U8G2_R0, /* cs=*/ 7, /* dc=*/ 19, /* r
 //...
 
 void setup(void) {
+  //Speedtest : Arduino\libraries\U8g2\examples\full_buffer\FPS\FPS.ino
+  //#define  BUSCLOCK 40000000  // 228.5 FPS (default)
+  //#define  BUSCLOCK 80000000  // 241.3 FPS
   u8g2.begin();
   u8g2.setContrast(CONTRAST);  // Necessary for GMG12864-06D 
 }
