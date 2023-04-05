@@ -74,7 +74,7 @@ U8G2_SSD1309_128X64_NONAME2_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
 
 // ESP32 C3 CORE LUATOS : GMG12864-06D HW-SPI , clock = 4, data = 6, reset (TFT) connected to Rest (Luatos)
 //U8G2_ST7565_ERC12864_ALT_F_4W_HW_SPI u8g2(U8G2_R0, /* cs=*/ 7, /* dc=*/ 19, /* reset=*/ U8X8_PIN_NONE);  
-//#define CONTRAST 75  // Necessary only for GWG12864-06D
+//#define CONTRAST 75  // Necessary only for GMG12864-06D
 
 void u8g2_prepare(void) {
   u8g2.setFont(u8g2_font_6x10_tf);
@@ -272,9 +272,12 @@ void draw(void) {
 }
 
 void setup(void) {
+  //u8g2.setBusClock( 1000000); // I2C default =  400000
+  //u8g2.setBusClock(80000000); // SPI default = 4000000
   u8g2.begin();
+
   #ifdef CONTRAST
-  u8g2.setContrast(CONTRAST);  // Necessary only for GWG12864-06D 
+    u8g2.setContrast(CONTRAST);  // Necessary only for GWG12864-06D 
   #endif
 }
 
