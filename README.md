@@ -56,11 +56,11 @@ void setup(void) {
 ```
 > This u8g2 drivers for I2C and SPI are using Hardware I2C (SPI), so i must use the Pins in the pinout shown above. 
 
-## Luatos ESP32 C3 Core with **SPI** display GMG12864-06D Ver:2.2
+## Luatos ESP32 C3 Core with **SPI** display GMG12864-06D
 
 ![GMG12864](pictures/GMG12864.jpg)
 
-Connections for LCD Display GMG12864-06D Ver 2.2 :
+Connections for LCD Display GMG12864-06D Ver:2.2
 
 | TFT  | GPIO |                 |
 | :--- | ---: | :-------------- |
