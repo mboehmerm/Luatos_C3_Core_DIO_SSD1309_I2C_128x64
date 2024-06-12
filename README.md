@@ -76,7 +76,7 @@ Connections for LCD Display GMG12864-06D Ver:2.2
 
 The Pin A of the TFT (backlight LED) is connected via a 47Ω resistor to 3.3V. RSE ( TFT reset pin ) is connected to the REST pin of the Luatos ESP32 C3.
 
-![GMG12864](pictures/GMG12864_Draw.jpg)
+![GMG12864](pictures/GMG12864_draw.jpg)
 
 
 Initialization :
