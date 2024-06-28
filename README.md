@@ -35,7 +35,7 @@ GraphicsTest_Luatos_C3_Core_DIO_SSD1309_I2C_128x64.ino :
 
 #ifdef  U8X8_HAVE_HW_SPI
 #include <SPI.h>
-#endif
+#endif 
 #ifdef U8X8_HAVE_HW_I2C
 #include <Wire.h>
 #endif
@@ -46,10 +46,10 @@ U8G2_SSD1309_128X64_NONAME2_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
 
 void setup(void) {
   //Speedtest : Arduino\libraries\U8g2\examples\full_buffer\FPS\FPS.ino
-  //u8g2.setBusClock( 400000); // 31.6 FPS (default)
-  //u8g2.setBusClock(1000000); // 58.2 FPS
+  //u8g2.setBusClock( 400000);  // 31.6 FPS (default)
+  //u8g2.setBusClock(1000000);  // 58.2 FPS
   u8g2.begin();
-  u8g2.setContrast(CONTRAST);  // Necessary for GMG12864-06D 
+  u8g2.setContrast(CONTRAST);   // Necessary for GMG12864-06D 
 }
 
 //...
@@ -76,7 +76,7 @@ Connections for LCD Display GMG12864-06D Ver:2.2
 
 The Pin A of the TFT (backlight LED) is connected via a 47Ω resistor to 3.3V. RSE ( TFT reset pin ) is connected to the REST pin of the Luatos ESP32 C3.
 
-![GMG12864](pictures/GMG12864_Draw.jpg)
+![GMG12864](pictures/GMG12864_draw.jpg)
 
 
 Initialization :
@@ -98,8 +98,8 @@ U8G2_ST7565_ERC12864_ALT_F_4W_HW_SPI u8g2(U8G2_R0, /* cs=*/ 7, /* dc=*/ 19, /* r
 
 void setup(void) {
   //Speedtest : Arduino\libraries\U8g2\examples\full_buffer\FPS\FPS.ino
-  //#define  BUSCLOCK 40000000  // 228.5 FPS (default)
-  //#define  BUSCLOCK 80000000  // 241.3 FPS
+  //#define  BUSCLOCK  40000000  // 228.5 FPS (default)
+  //#define  BUSCLOCK  80000000  // 241.3 FPS
   u8g2.begin();
   u8g2.setContrast(CONTRAST);  // Necessary for GMG12864-06D 
 }
