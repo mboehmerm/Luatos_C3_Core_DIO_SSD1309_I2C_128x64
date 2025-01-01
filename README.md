@@ -1,4 +1,4 @@
-# Luatos_ESP32_C3_Core_DIO_SSD1309_I2C_128x64
+# Luatos ESP32-C3 Core and SSD1309 I2C 128x64 display
 
 Aliexpress I2C Display ~3€, tested with Luatos ESP32 C3 Core ~3€.
 
@@ -12,7 +12,7 @@ My display connector is marked with "GME12864-70".
 
 ## Arduino IDE configuration
 - Board: "ESP32C3 Dev Module" 
-- Flash Mode: "DIO"
+- Flash Mode:  "DIO"
 
 ## Connections for Luatos ESP32 C3 Core
 
